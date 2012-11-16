@@ -200,6 +200,7 @@ class Watcher(object):
         output = subprocess.Popen(cmd, shell=True)
         output = output.communicate()[0]
         print output
+        sys.stdout.flush()
 
     def run_tests(self):
         """Execute tests"""
